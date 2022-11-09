@@ -11,7 +11,6 @@ const initialState = {
   firstNumber: null,
   operation: '',
   secondNumber: null,
-  totalValue: '0',
 };
 
 class Calculator {
@@ -91,7 +90,7 @@ class Calculator {
 
   renderTotal() {
     const { firstNumber, operation, secondNumber } = this.state;
-    this.$total.textContent = `${firstNumber ?? 0}${operation ?? ''}${secondNumber ?? ''}`;
+    this.$total.textContent = `${firstNumber ?? 0}${operation}${secondNumber ?? ''}`;
   }
 }
 
